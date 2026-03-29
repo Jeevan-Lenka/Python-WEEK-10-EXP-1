@@ -1,0 +1,14 @@
+import pandas as pd
+data = """Name,Age,City,Salary
+John,25,NY,50000
+Alice,30,London,60000
+Bob,22,Paris,45000
+Diana,35,Tokyo,70000"""
+with open("data.csv", "w") as f:
+	f.write(data)
+df = pd.read_csv("data.csv")
+print("Head:\n", df.head(2))
+print("\nTail:\n", df.tail(2))
+print("\nInfo:")
+df.info()
+print("\nDescribe:\n", df.describe())
